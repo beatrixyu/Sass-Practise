@@ -1,0 +1,10 @@
+$dark-color: rgb(52, 6, 54);
+$light-color: rgb(209, 163, 223);
+$medium-size: 100px;
+
+nav {
+  height: $medium-size * 3;
+  width: 100%;
+  text-align: center;
+  background-color: $light-color;
+}

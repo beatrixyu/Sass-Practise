@@ -1,0 +1,62 @@
+//this part contains topbar styling
+@import "top_bar";
+@import "side_bar";
+
+$dark-color: rgb(41, 39, 39);
+$light-color: rgb(138, 135, 135);
+$medium-size: 100px;
+
+@mixin small-container {
+  float: right;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.person-card {
+  @include small-container();
+  background-color: bisque;
+  top: $medium-size;
+  right: $medium-size * 4;
+}
+
+.ad-card {
+  position: absolute;
+  @include small-container();
+  background-color: cyan;
+  top: $medium-size;
+  right: $medium-size * 3;
+}
+
+// the big name card
+@mixin big-container($size, $radius, $float, $background-color) {
+  float: $float;
+  position: absolute;
+  width: $size;
+  height: $size;
+  border: 1px solid black;
+  border-radius: $radius;
+  text-align: center;
+  background-color: $background-color;
+}
+
+.person-card-2 {
+  @include big-container(200px, 10px, right, purple);
+  top: $medium-size * 4;
+  right: $medium-size * 2;
+}
+
+.ad-card-2 {
+  @include big-container(200px, 10px, left, yellow);
+  top: $medium-size * 4;
+  right: $medium-size * 5;
+}
+
+body {
+  height: $medium-size * 7;
+  width: 100%;
+  background-color: $light-color;
+}
